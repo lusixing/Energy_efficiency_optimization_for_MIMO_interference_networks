@@ -13,7 +13,7 @@ dk=size(v,2);
 H=zeros(Nr*K,Nt*K);
 for i=1:K
     for j=1:K
-        H((i-1)*Nt+1:i*Nr,(j-1)*Nt+1:j*Nt)=h(:,:,i,j);   
+        H((i-1)*Nr+1:i*Nr,(j-1)*Nt+1:j*Nt)=h(:,:,i,j);   
     end
 end
 
@@ -53,7 +53,7 @@ cvx_begin sdp quiet
          T3=kron(eye(dk*K),w_c*u(:,:,k)*Theta*H)*vec(V)-vec(w_c*Xi);         
          
         [eye(dk*Nt) vec(v_n(:,:,k));vec(v_n(:,:,k))' Pd]'>=0                                                           
-        sym_cvx([         eye(length(T1)+length(T2)+length(T3))         [T1;T2;T3] ;                                   % ensure the symmetry of the £¬                   
+        sym_cvx([         eye(length(T1)+length(T2)+length(T3))         [T1;T2;T3] ;                                   % ensure the symmetry of the Â£Â¬                   
         [T1;T2;T3]'   -tau+log(det(w(:,:,k)))+dk-lambda*Ps-p_noise*trace( (w_c*u(:,:,k))*(w_c*u(:,:,k))' )] )   >= 0   % constrain matrix
      end                                                                                                               
      
