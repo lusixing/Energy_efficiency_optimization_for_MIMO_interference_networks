@@ -2,7 +2,7 @@
 % Simulation code for varifing the convergence of the iterative SCA
 % algorithm for maximizing the energy efficience(EE) of multi-user MIMO
 % interference networks under perfect and imperfect csi scenario. 
-% Code written by Sixing Lu , email:562237037@qq.com
+% Code written by Sixing Lu , email:lusixingjnu@foxmail.com
 %-----------------------------------------------
 clear
 Nr =2;      %Number of receive antennas
