@@ -2,7 +2,7 @@
 % Successive convex approximation (SCA) algorithm updating the percoding 
 % covariance matrix of each user in the mimo interfrence networks, 
 % with presence of channel estimation uncertainty.
-% Code written by Sixing Lu, email:562237037@qq.com
+% Code written by Sixing Lu, email:lusixingjnu@foxmail.com
 % ---------------------------------------------
 function [Q_opti] = SCA_rbst(h,lambda,Q_n,p_noise,Pd,Ps,var_ce,R_r,R_t)
 Nr =size(h,1);
