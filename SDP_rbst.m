@@ -1,7 +1,7 @@
 % ---------------------------------------------
 % Semi-definite programming(SDP) part for the iterative SDP-WMMSE algorithm
 % update the the precoding matrix for each user
-% Code written by Sixing Lu , email:562237037@qq.com
+% Code written by Sixing Lu , email:lusixingjnu@foxmail.com
 % ---------------------------------------------
 
 function [v_n] = SDP_rbst(lambda,h,u,v,w,p_noise,Pd,Ps,chn_err,Rt,Rr)
